@@ -14,5 +14,21 @@
             { "name": "Vacuna", "strongAgainst": [], "weakAgainst": [] }
         ],
         "img": "https://vignette.wikia.nocookie.net/tu-digimon/images/e/e4/Gatomon.gif/revision/latest/scale-to-width-down/300?cb=20130127193244&path-prefix=es"
+    },
+    {
+        "id": 3,
+        "name": "Devimón",
+        "type": [
+            { "name": "Virus", "strongAgainst": [], "weakAgainst": [] }
+        ],
+        "img": "https://pm1.narvii.com/6839/b879886c9d7dfef8a0093bd270f32b8a6795dcf9v2_00.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Etemón",
+        "type": [
+            { "name": "Virus", "strongAgainst": [], "weakAgainst": [] }
+        ],
+        "img": "https://static.wikia.nocookie.net/digimon/images/e/ea/Etemon_b.jpg/revision/latest/top-crop/width/360/height/450?cb=20190607201533&path-prefix=es"
     }
 ]

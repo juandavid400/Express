@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Bulbasur",
+        "id": 1,
+        "type": [
+            { "name": "Planta", 
+            "strongAgainst": ["Tierra", "Roca", "Agua"], 
+            "weakAgainst": ["Volador", "Veneno", "Bicho", "Fuego", "Hielo"] }
+        ],
+        "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+    },
+    {
+        "name": "Charmander",
+        "id": 4,
+        "type": [
+            { "name": "Fuego", 
+            "strongAgainst": ["Bicho", "Acero", "Planta", "Hielo"], 
+            "weakAgainst": ["Tierra", "Roca", "Agua"] }
+        ],
+        "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+    },
+    {
+        "name": "Squirtle",
+        "id": 7,
+        "type": [
+            { "name": "Agua", 
+            "strongAgainst": ["Tierra", "Roca", "Fuego"], 
+            "weakAgainst": ["Planta", "Eléctrico"] }
+        ],
+        "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png"
+    },
+    {
+        "name": "Pikachu",
+        "id": 25,
+        "type": [
+            { "name": "Electrico", 
+            "strongAgainst": ["Volador", "Agua"], 
+            "weakAgainst": ["Tierra"] }
+        ],
+        "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"
+    }
+]

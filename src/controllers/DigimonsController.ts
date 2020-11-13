@@ -22,6 +22,7 @@ export function getName(req: Request, res: Response) {
         const name = req.params.name && req.params.name || undefined;
         if(!name){ throw "Se requiere el nombre del digimon."}
         const digimon = DigimonsService.getName(name);
+        
         res.status(200).json(digimon);
     } catch (error) {
         res.status(400).send(error);

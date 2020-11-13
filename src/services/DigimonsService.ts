@@ -15,18 +15,18 @@ module DigimonsService {
         }
         return digimon[0];
     }
-    
-    export function getName(name: string): DigimonI {
-        console.log("Entre getname");
-        
+
+    export function getName(name: string): Array<DigimonI> {
         const digimons: Array<DigimonI> = db;
-        const digimon: Array<DigimonI> = digimons.filter(e => e.name === name);
-        if (digimon.length < 1) {
+        const matches: Array<DigimonI> = digimons.filter(function(el) {
+            return el.name.toLowerCase().indexOf(name.toLowerCase()) > -1 || el.name.slice(0, -3) === name.slice(0, -3);
+        })
+        if (matches.length < 1) {
             throw "No se encontró el digimon"
         }
-
-        return digimon[0];
+        return matches;
     }
+
 
     export function getType(type: string): Array<DigimonI> {
         const digimons: Array<DigimonI> = db;
