@@ -28,8 +28,7 @@ module PokemonsService {
             throw "No se encontró el pokemon"
         } else {
             pokemon = pokemon.filter(function(el) {
-                const nombre = el.name;
-                
+                const nombre = el.name;                
                 const status = el.type.filter(e =>{
                     let tipo = e.name;         
                     pokemons.forEach(pokemon => {
@@ -109,43 +108,11 @@ module PokemonsService {
         }
         return matches;
     }
-    //,type: string,strongAgainst: string,weakAgainst: string,img: string
+
     export function getNewPokemon(name: string): Array<PokemonI> {
-        // const writeJsonFile = require('bit/global/write-json-file');
-        // writeJsonFile(db,{isThisReal:PokemonsService,author:PokemonsService}).catch((err: any) =>{console.log(err)} );
-        
-        
-        // const pokemons: Array<PokemonI> = db;
-        // let pokemonNew = [];
-        // pokemonNew.push(name);
         var splitted = name.split(",");
-        // var nP = {"Nombre":splitted[0],"tipo":splitted[1],"strongAgainst":splitted[2],"weakAgainst":splitted[3],"img": splitted[4]} ;
-        // var local = localStorage.setItem('NewPokemon', JSON.stringify(nP));
-
-        throw "Nombre: "+splitted[0]+ " tipo: " +splitted[1]+ " es fuerte contra " +splitted[2]+ " es debil contra " +splitted[3]+ " img " + splitted[4]  ;
-        // console.log(local);
-        // nP = JSON.parse(localStorage.getItem('NewPokemon'));
-        // throw nP
-    //     const fs = require('fs');
-    //    const vaildateJson = require('bit/global/json-validator');
-
-    //    const writeToFile = (file: any,data: any) => {
-    //      const jsonStr =  (nP  instanceof Object) ? JSON.stringify(nP,null,4) : nP ;
-    //      return vaildateJson(jsonStr)
-    //        .then((jsonStr:any) =>
-    //          new Promise((resolve, reject) => {
-    //            fs.writeFile(`${file}`, jsonStr, 'utf-8', function(err:any) {
-    //              if (err) reject(err);
-    //              else resolve(jsonStr);
-    //            });
-    //          }))
-    //    }
-    //    console.log(writeToFile);
-    //    throw writeToFile
+        throw "Nombre: "+splitted[0]+ " tipo: " +splitted[1]+ " es fuerte contra " +splitted[2]+ " es debil contra " +splitted[3]+ " img " + splitted[4];
     }
-
-    
-
 }
 
 export default PokemonsService;

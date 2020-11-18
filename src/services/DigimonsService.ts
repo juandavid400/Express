@@ -18,7 +18,7 @@ module DigimonsService {
 
     export function getName(name: string): Array<DigimonI> {
         const digimons: Array<DigimonI> = db;
-        const matches: Array<DigimonI> = digimons.filter(function(el) {
+        const matches: Array<DigimonI> = digimons.filter(function(el) {//pataadsadadadasdmon
             return el.name.toLowerCase().indexOf(name.toLowerCase()) > -1 || el.name.slice(0, -3) === name.slice(0, -3);
         })
         if (matches.length < 1) {
