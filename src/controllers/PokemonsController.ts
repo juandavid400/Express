@@ -40,6 +40,7 @@ export function getType(req: Request, res: Response) {
         }
 }
 
+
 export function getAgainst(req: Request, res: Response) {
     try {
         const name = req.params.name && req.params.name || undefined;

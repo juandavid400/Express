@@ -25,7 +25,7 @@
         "type": [
             { "name": "Agua", 
             "strongAgainst": ["Tierra", "Roca", "Fuego"], 
-            "weakAgainst": ["Planta", "Eléctrico"] }
+            "weakAgainst": ["Planta", "Electrico"] }
         ],
         "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png"
     },

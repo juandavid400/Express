@@ -21,8 +21,10 @@ module PokemonsService {
         let matchesStrong: Array<PokemonI> = [];
         let matchesWeak: Array<PokemonI> = [];
         let pokemon: Array<PokemonI> = pokemons.filter(function (el) {
-            return el.name.toLowerCase().indexOf(name.toLowerCase()) > -1;
-        })
+            const pokeName = name.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            const comparationName = el.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            return comparationName.toLowerCase().indexOf(pokeName.toLowerCase()) > -1;
+        });
 
         if (pokemon.length < 1) {
             throw "No se encontró el pokemon"
@@ -81,9 +83,11 @@ module PokemonsService {
 
     export function getName(name: string): Array<PokemonI> {
         const pokemons: Array<PokemonI> = db;
-        const matches: Array<PokemonI> = pokemons.filter(function(el) {
-            return el.name.toLowerCase().indexOf(name.toLowerCase()) > -1;
-        })
+        let matches: Array<PokemonI> = pokemons.filter(function (el) {
+            const pokeName = name.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            const comparationName = el.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            return comparationName.toLowerCase().indexOf(pokeName.toLowerCase()) > -1;
+        });
         if (matches.length < 1) {
             throw "No se encontró el pokemon"
         }
@@ -95,8 +99,11 @@ module PokemonsService {
         const pokemons: Array<PokemonI> = db;
         let matches: Array<PokemonI> = [];
         pokemons.forEach(pokemon => {
+            
             const found = pokemon.type.filter(function(el) {
-                return el.name.toLowerCase().indexOf(type.toLowerCase()) > -1;
+                const pokeName = type.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                const comparationName = el.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                return comparationName.toLowerCase().indexOf(pokeName.toLowerCase()) > -1;
             });
             if (found.length>0) {
                 matches.push(pokemon);
